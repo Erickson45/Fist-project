@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="programas.css">
+</head>
+
+<style>
+    *,
+    *:before,
+*:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.menu {
+    background: white;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    cursor: pointer;
+    box-shadow: 0 0 0 0 rgb(255, 255, 255), 0 0 0 0 white;
+    transition: box-shadow 1s ease-in-out;
+}
+.menu:hover {
+    box-shadow: 0 0 0 8px rgb(255, 255, 255), 0 0 0 8px white;
+    
+}
+
+.hamburguer {
+    position: relative;
+    display: block;
+    background: #000;
+    width: 30px;
+    height: 2px;
+    top: 29px;
+    left: 15px;
+    transition: .5s ease-in-out;
+}
+
+.hamburguer::before,
+.hamburguer::after {
+    background: #000;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: .5s ease-in-out;
+}
+
+.hamburguer::before {
+top: -10px;
+}
+
+.hamburguer:after {
+bottom: -10px;
+}
+
+input {
+    display: none;
+}
+
+input:checked ~ ul {
+    opacity: 1;
+}
+
+input:checked ~ label .menu {
+    box-shadow: 0 0 0 100vw rgb(0, 162, 255), 0 0 0 100vh rgb(0, 162, 255);
+}
+
+input:checked ~ label .hamburguer {
+    transform: rotate(45deg);
+}
+
+input:checked ~ label .hamburguer:before {
+    transform: rotate(90deg);
+    top: 0;
+}
+
+input:checked ~ label .hamburguer:after {
+    transform: rotate(90deg);
+    bottom: 0;
+}
+
+ul {
+    position: absolute;
+    opacity: 0;
+    transition: .25s .3s ease-in-out;
+    padding: 50x;
+    list-style: none;
+}
+
+li a {
+    display: block;
+    margin-bottom: 40px;
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    list-style: none;
+
+}
+
+
+
+
+</style>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="circle">
+                <h2>ECG</h2>
+                </div>
+                <div class="content">
+                    <p>O Eletrocardiograma também é chamado de ECG ou eletrocardiografia. 
+                        É um exame que avalia a atividade elétrica do coração.</p>
+                        <a href="file:///C:/Users/erick/Desktop/projeto%20de/Ecg.html">Clique em mim</a>
+                        </div>
+                      </div>  
+        <div class="card">
+            <div class="circle">
+                <h2>EEG</h2>
+                </div>
+                <div class="content">
+                    <p>Eletroencefalografia é um método de monitoramento eletrofisiológico que é utilizado para registrar a atividade elétrica do cérebro.</p>
+                        <a href="file:///C:/Users/erick/Desktop/projeto%20de/Eeg.html">Clique em mim</a>
+                </div>
+              </div>
+        <div class="card">
+            <div class="circle">
+                <h2>HOLTER</h2>
+                </div>
+                <div class="content">
+                    <p>o exame Holter, que consiste em um eletrocardiograma contínuo e portátil por 24 h. 
+        A finalidade deste exame é identificar distúrbios do ritmo cardíaco nas atividades diárias do paciente</p>
+                        <a href="#">Clique em mim</a>
+                </div>
+        </div>
+        <div class="card">
+            <div class="circle">
+                <h2>MAPA</h2>
+                </div>
+                <div class="content">
+                    <p>A Monitorização Ambulatorial da Pressão Arterial (MAPA) é um exame que permite o registro indireto e intermitente da pressão arterial durante 24 horas,
+                         enquanto o paciente realiza suas atividades habituais.</p>
+                        <a href="#">Clique em mim</a>
+                </div>
+        </div>
+    </div>
+    <input id="menu-hamburguer" type="checkbox">
+    <label for="menu-hamburguer">
+    <div class="menu">
+    <span class="hamburguer"></span>
+</div>
+    </label>
+
+    <ul>
+<li><a href="file:///C:/Users/erick/Desktop/projeto%20de/Site.html" target="_blank">Home</a></li>
+    </ul>
+    
+</body>
+</html>
